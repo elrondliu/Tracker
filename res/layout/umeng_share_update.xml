@@ -9,7 +9,7 @@
     <RelativeLayout
         android:id="@+id/title_bar"
         android:layout_alignParentTop="true"
-        style="@style/TrackerActionBar"
+        android:layout_height="wrap_content"
         >
 
         <TextView android:id="@+id/title"

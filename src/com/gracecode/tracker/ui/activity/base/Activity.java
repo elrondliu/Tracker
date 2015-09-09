@@ -8,21 +8,21 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+
 import com.gracecode.tracker.R;
 import com.gracecode.tracker.service.Recorder;
 import com.gracecode.tracker.util.Helper;
-import com.markupartist.android.widget.ActionBar;
 import com.umeng.analytics.MobclickAgent;
 
-public abstract class Activity extends FragmentActivity {
+public abstract class Activity extends AppCompatActivity {
     protected SharedPreferences sharedPreferences;
     protected Helper helper;
     public Intent recordServerIntent;
-    protected ActionBar actionBar;
+    protected Toolbar actionBar;
     protected Activity context;
     protected Recorder.ServiceBinder serviceBinder = null;
     protected FragmentManager fragmentManager;
@@ -63,19 +63,8 @@ public abstract class Activity extends FragmentActivity {
         startService(recordServerIntent);
         bindService(recordServerIntent, serviceConnection, BIND_AUTO_CREATE);
 
-        actionBar = (ActionBar) findViewById(R.id.action_bar);
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setHomeAction(new ActionBar.Action() {
-            @Override
-            public int getDrawable() {
-                return R.drawable.ic_menu_home;
-            }
-
-            @Override
-            public void performAction(View view) {
-                finish();
-            }
-        });
+        actionBar = (Toolbar) findViewById(R.id.id_toolbar_top);
+        setSupportActionBar(actionBar);
     }
 
     @Override

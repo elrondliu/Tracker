@@ -1,5 +1,5 @@
 .DS_Store
-/*.iml
+*.iml
 /.idea
 /proguard_logs/
 /nbandroid/
@@ -34,3 +34,5 @@ local.properties
 /.classpath
 /.project
 /Tracker.eml
+/build
+/.gradle

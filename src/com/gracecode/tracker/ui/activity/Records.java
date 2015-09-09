@@ -11,7 +11,6 @@ import com.gracecode.tracker.dao.ArchiveMeta;
 import com.gracecode.tracker.dao.Archiver;
 import com.gracecode.tracker.service.ArchiveNameHelper;
 import com.gracecode.tracker.ui.activity.base.Activity;
-import com.markupartist.android.widget.ActionBar;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -108,8 +107,7 @@ public class Records extends Activity implements AdapterView.OnItemClickListener
         super.onStart();
         listView.setOnItemClickListener(this);
 
-        actionBar.removeAllActions();
-        actionBar.addAction(
+        /*actionBar.addAction(
             new ActionBar.Action() {
                 @Override
                 public int getDrawable() {
@@ -121,7 +119,7 @@ public class Records extends Activity implements AdapterView.OnItemClickListener
                     showTimeSelectDialog();
                 }
             }
-        );
+        );*/
 
         selectedTime = getIntent().getLongExtra(INTENT_SELECT_BY_MONTH, System.currentTimeMillis());
 

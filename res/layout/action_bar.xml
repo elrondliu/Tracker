@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<com.markupartist.android.widget.ActionBar
-    xmlns:app="http://schemas.android.com/apk/res/com.gracecode.tracker"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    app:title="@string/app_name"
-    android:id="@+id/action_bar"
-    style="@style/TrackerActionBar"
-    />
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:minHeight="?attr/actionBarSize"
+    app:popupTheme="@style/ThemeOverlay.AppCompat"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />

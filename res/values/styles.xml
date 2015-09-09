@@ -1,6 +1,7 @@
 <resources>
-    <style name="Window" parent="@android:style/Theme.NoTitleBar">
-
+    <style name="Window" parent="Theme.AppCompat">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="Shadow">
@@ -62,10 +63,6 @@
     </style>
     <style name="Status.Distance" parent="Status.Status">
     </style>
-    <style name="TrackerActionBar" parent="ActionBar">
-        <item name="android:background">@drawable/bg_action_bar</item>
-    </style>
-
 
     <style name="BigTitle" parent="Shadow">
         <item name="android:textColor">@color/mils</item>

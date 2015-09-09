@@ -13,7 +13,7 @@
         >
         <TextView android:id="@+id/umeng_fb_new_reply_alert_title"
                   android:text="您的反馈收到了回复"
-                  style="@style/TrackerActionBar"
+            android:layout_height="wrap_content"
                   android:textColor="@color/snowhite"
                   android:gravity="center_vertical"
                   android:paddingLeft="15dp"

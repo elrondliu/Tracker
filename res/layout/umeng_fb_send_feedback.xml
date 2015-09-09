@@ -7,7 +7,7 @@
               android:background="@drawable/bg">
 
     <RelativeLayout
-        style="@style/TrackerActionBar"
+        android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:gravity="center_vertical"
         >

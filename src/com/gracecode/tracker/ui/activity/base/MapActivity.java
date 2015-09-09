@@ -3,10 +3,11 @@ package com.gracecode.tracker.ui.activity.base;
 import android.content.Context;
 import android.location.Location;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+
 import com.baidu.mapapi.*;
 import com.gracecode.tracker.R;
 import com.gracecode.tracker.util.Helper;
-import com.markupartist.android.widget.ActionBar;
 import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public abstract class MapActivity extends com.baidu.mapapi.MapActivity implement
     private static final String BAIDU_MAP_KEY = "30183AD8A6AFE7CE8F649ED4CD258211E8DE78D7";
     protected Helper helper;
     protected Context context;
-    protected ActionBar actionBar;
+    protected Toolbar actionBar;
 
     protected ArrayList<Location> locations;
 
@@ -40,7 +41,7 @@ public abstract class MapActivity extends com.baidu.mapapi.MapActivity implement
         bMapManager = new BMapManager(getApplication());
         bMapManager.init(BAIDU_MAP_KEY, this);
 
-        actionBar = (ActionBar) findViewById(R.id.action_bar);
+        actionBar = (Toolbar) findViewById(R.id.action_bar);
 
         helper = new Helper(context);
         MobclickAgent.onError(this);

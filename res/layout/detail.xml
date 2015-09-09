@@ -1,71 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:background="@drawable/bg"
-              android:layout_width="fill_parent"
-              android:orientation="vertical"
-              android:layout_height="fill_parent">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical">
 
-    <include layout="@layout/action_bar" />
+    <include
+        android:id="@+id/id_toolbar_top"
+        layout="@layout/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <RelativeLayout
-        android:orientation="vertical"
         android:id="@+id/detail_layout"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
 
 
         <LinearLayout
-            android:layout_alignParentBottom="true"
             android:id="@+id/status_layout"
             android:layout_width="fill_parent"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
 
-            <FrameLayout android:layout_width="fill_parent"
-                         android:layout_height="wrap_content"
-                         android:id="@+id/archive_meta_time_layout"
-                />
+            <FrameLayout
+                android:id="@+id/archive_meta_time_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
 
-            <FrameLayout android:layout_width="fill_parent"
-                         android:layout_height="wrap_content"
-                         android:id="@+id/archive_meta_layout"
-                />
+            <FrameLayout
+                android:id="@+id/archive_meta_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
 
         <LinearLayout
-            android:orientation="vertical"
             android:id="@+id/description_layout"
-            android:layout_above="@id/status_layout"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
-            <HorizontalScrollView
-                style="@style/Detail.Description">
+            android:layout_height="wrap_content"
+            android:layout_above="@id/status_layout"
+            android:orientation="vertical">
+
+            <HorizontalScrollView style="@style/Detail.Description">
+
                 <TextView
-                    style="@style/Detail.Description.Text"
                     android:id="@+id/item_description"
-                    android:layout_alignParentLeft="true"
-                    />
+                    style="@style/Detail.Description.Text"
+                    android:layout_alignParentLeft="true" />
             </HorizontalScrollView>
-            <LinearLayout
-                style="@style/Detail.Description.Cell"
-                />
+
+            <LinearLayout style="@style/Detail.Description.Cell" />
         </LinearLayout>
 
         <FrameLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_alignParentTop="true"
             android:layout_above="@id/description_layout"
-            >
+            android:layout_alignParentTop="true">
 
             <FrameLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:focusable="false"
                 android:clickable="false"
-                />
+                android:focusable="false" />
 
             <!-- MapView From TabHost -->
             <include layout="@layout/tab_container" />
@@ -73,14 +74,13 @@
             <RelativeLayout
                 android:id="@+id/map_mask"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                >
+                android:layout_height="fill_parent">
 
                 <ImageView
-                    android:layout_alignParentBottom="true"
-                    android:background="@drawable/cell_description_horizontal"
                     android:layout_width="fill_parent"
-                    android:layout_height="10dp" />
+                    android:layout_height="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/cell_description_horizontal" />
 
             </RelativeLayout>
         </FrameLayout>

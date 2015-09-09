@@ -9,7 +9,6 @@ import com.gracecode.tracker.dao.ArchiveMeta;
 import com.gracecode.tracker.dao.Archiver;
 import com.gracecode.tracker.ui.activity.base.Activity;
 import com.gracecode.tracker.ui.fragment.SpeedChartsFragment;
-import com.markupartist.android.widget.ActionBar;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;
@@ -47,8 +46,7 @@ public class SpeedCharts extends Activity {
         super.onStart();
         actionBar.setTitle(description);
 
-        actionBar.removeAllActions();
-        actionBar.addAction(new ActionBar.Action() {
+        /*actionBar.addAction(new ActionBar.Action() {
             @Override
             public int getDrawable() {
                 return R.drawable.ic_menu_share;
@@ -58,7 +56,7 @@ public class SpeedCharts extends Activity {
             public void performAction(View view) {
                 shareToSina();
             }
-        });
+        });*/
 
         addFragment(R.id.charts, speedChartsFragment);
     }

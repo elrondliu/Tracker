@@ -3,7 +3,7 @@
               android:orientation="vertical" android:layout_width="fill_parent"
               android:layout_height="fill_parent" android:background="#E0E0E0">
     <RelativeLayout
-        style="@style/TrackerActionBar"
+        android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:gravity="center_vertical"
         >

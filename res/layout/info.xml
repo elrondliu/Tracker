@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              style="@style/LightBackground"
-    >
+    style="@style/LightBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
 
-    <include layout="@layout/action_bar" />
+    <include
+        android:id="@+id/id_toolbar_top"
+        layout="@layout/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <WebView
-        android:scrollbars="none"
+        android:id="@+id/webview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/webview"
         android:layout_weight="1.0"
-        />
+        android:scrollbars="none" />
 </LinearLayout>
 

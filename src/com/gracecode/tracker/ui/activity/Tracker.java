@@ -17,7 +17,6 @@ import com.gracecode.tracker.service.Recorder;
 import com.gracecode.tracker.ui.activity.base.Activity;
 import com.gracecode.tracker.ui.fragment.ArchiveMetaFragment;
 import com.gracecode.tracker.util.Helper;
-import com.markupartist.android.widget.ActionBar;
 import com.umeng.fb.NotificationType;
 import com.umeng.fb.UMFeedbackService;
 import com.umeng.update.UmengUpdateAgent;
@@ -103,10 +102,7 @@ public class Tracker extends Activity implements View.OnClickListener, View.OnLo
 
         // 设置 ActionBar 样式
         actionBar.setTitle(getString(R.string.app_name));
-        actionBar.removeAllActions();
-        actionBar.setDisplayHomeAsUpEnabled(false);
-        actionBar.clearHomeAction();
-        actionBar.addAction(
+        /*actionBar.addAction(
             new ActionBar.Action() {
                 @Override
                 public int getDrawable() {
@@ -118,7 +114,7 @@ public class Tracker extends Activity implements View.OnClickListener, View.OnLo
                     gotoActivity(Records.class);
                 }
             }
-        );
+        );*/
     }
 
     private void gotoActivity(java.lang.Class cls) {

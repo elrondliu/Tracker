@@ -17,7 +17,6 @@ import com.gracecode.tracker.ui.activity.base.Activity;
 import com.gracecode.tracker.ui.activity.maps.BaiduMap;
 import com.gracecode.tracker.ui.fragment.ArchiveMetaFragment;
 import com.gracecode.tracker.ui.fragment.ArchiveMetaTimeFragment;
-import com.markupartist.android.widget.ActionBar;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;
@@ -77,8 +76,7 @@ public class Detail extends Activity implements View.OnTouchListener, View.OnCli
         }
 
         actionBar.setTitle(getString(R.string.title_detail));
-        actionBar.removeAllActions();
-
+        /*
         // Speed charts
         actionBar.addAction(new ActionBar.Action() {
             @Override
@@ -105,7 +103,7 @@ public class Detail extends Activity implements View.OnTouchListener, View.OnCli
             public void performAction(View view) {
                 shareToSina();
             }
-        });
+        });*/
     }
 
 
